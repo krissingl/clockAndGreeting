@@ -10,9 +10,12 @@ body {
 .main {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 .header {
   color:aliceblue;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.56);
 }
 .Widget {
   background: rgba(0, 0, 0, 0.56);

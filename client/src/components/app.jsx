@@ -19,8 +19,8 @@ class App extends React.Component {
           <h1>{this.state.message}</h1>
         </div>
         <div className={classes.main}>
-          <ClockWidget />
           <QuoteWidget />
+          <ClockWidget />
           <WeatherWidget />
         </div>
       </div>
