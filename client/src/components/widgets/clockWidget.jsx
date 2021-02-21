@@ -24,8 +24,8 @@ class ClockWidget extends React.Component {
   }
 
   updateClock() {
-    console.log(`Current Format: ${this.props.currentFormat}`);
-    this.setState({ currentTime: new Date().toLocaleTimeString() });
+    const newTime = getTime(this.props.currentFormat);
+    this.setState({ currentTime: newTime });
   }
 
   render() {
