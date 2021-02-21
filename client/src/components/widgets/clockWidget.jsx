@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../../css/styles.css';
+import ToggleFormatButton from '../toggleFormat.jsx';
 
 class ClockWidget extends React.Component {
   constructor() {
@@ -24,14 +25,10 @@ class ClockWidget extends React.Component {
     this.setState({ currentTime: new Date().toLocaleTimeString() });
   }
 
-  changeFormat() {
-    console.log('Figure out how to change format.');
-  }
-
   render() {
     return (
       <div className={classes.Widget}>
-        <button type="button" onClick={this.changeFormat}>12hr</button>
+        <ToggleFormatButton />
         <div>{this.state.currentTime}</div>
       </div>
     );

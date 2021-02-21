@@ -1,12 +1,12 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  page: 1,
+  currentFormat: '12hr',
 };
 
 const reducer = (state = initialState, action) => {
-  if (action.type === 'changePage') {
-    return { ...state, page: action.payload };
+  if (action.type === 'changeTimeFormat') {
+    return { ...state, currentFormat: action.payload };
   }
   return state;
 };
