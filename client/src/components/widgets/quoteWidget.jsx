@@ -13,23 +13,16 @@ class QuoteWidget extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=${WEATHER_API_KEY}`)
+    axios.get('https://type.fit/api/quotes')
       .then((response) => {
-        console.log(response.data);
+        const endOfList = response.data.length - 1;
+        const randomNum = Math.floor((Math.random() * endOfList) + 1);
+        console.log(response.data[randomNum]);
       })
       .catch((error) => {
         console.log(error);
       });
   }
-  // componentDidMount() {
-  //   axios.get('https://dog.ceo/api/breeds/image/random')
-  //   .then(response => {
-  //     console.log(response.data);
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
-  // }
 
   render() {
     return (
