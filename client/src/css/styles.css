@@ -5,7 +5,15 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  color: aliceblue;
 }
-.test {
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.header {
   color:aliceblue;
+}
+.Widget {
+  background: rgba(0, 0, 0, 0.56);
 }

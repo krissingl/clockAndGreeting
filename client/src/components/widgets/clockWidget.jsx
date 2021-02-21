@@ -4,7 +4,7 @@ import classes from '../../css/styles.css';
 const ClockWidget = () => {
   console.log('Clock Widget fired');
   return (
-    <div className={classes.ClockWidget}>
+    <div className={classes.Widget}>
       <div>Clock Widget</div>
     </div>
   );

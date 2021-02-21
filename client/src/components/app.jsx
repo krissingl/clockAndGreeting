@@ -1,17 +1,29 @@
 import React from 'react';
 import classes from '../css/styles.css';
+import ClockWidget from './widgets/clockWidget.jsx';
+import QuoteWidget from './widgets/quoteWidget.jsx';
+import WeatherWidget from './widgets/weatherWidget.jsx';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      color: 'blue',
+      message: 'Welcome to Inspire',
     };
   }
 
   render() {
     return (
-      <div className={classes.test}>Ollo?</div>
+      <div>
+        <div className={classes.header}>
+          <h1>{this.state.message}</h1>
+        </div>
+        <div className={classes.main}>
+          <ClockWidget />
+          <QuoteWidget />
+          <WeatherWidget />
+        </div>
+      </div>
     );
   }
 }
