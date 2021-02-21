@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 const initialState = {
   currentFormat: '12hr',
-  timeOfDay: 'morning',
+  timeOfDay: null,
 };
 
 const reducer = (state = initialState, action) => {

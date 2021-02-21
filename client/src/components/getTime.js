@@ -1,4 +1,4 @@
-// classes?
+// Takes format and return time formatted
 
 const getTime = (format) => {
   const date = new Date();
