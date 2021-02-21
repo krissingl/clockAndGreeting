@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import classes from '../../css/styles.css';
 import ToggleFormatButton from '../toggleFormat.jsx';
+import getTime from '../getTime.js';
 
 class ClockWidget extends React.Component {
   constructor() {
@@ -22,6 +24,7 @@ class ClockWidget extends React.Component {
   }
 
   updateClock() {
+    console.log(`Current Format: ${this.props.currentFormat}`);
     this.setState({ currentTime: new Date().toLocaleTimeString() });
   }
 
@@ -35,4 +38,8 @@ class ClockWidget extends React.Component {
   }
 }
 
-export default ClockWidget;
+const mapStateToProps = (state) => ({
+  currentFormat: state.currentFormat,
+});
+
+export default connect(mapStateToProps)(ClockWidget);

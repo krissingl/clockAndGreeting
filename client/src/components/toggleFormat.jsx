@@ -12,7 +12,7 @@ const ToggleFormatButton = ({ dispatch, currentFormat }) => {
 
   const toggleFormat = (format) => {
     dispatch({
-      type: 'changeFormat',
+      type: 'changeTimeFormat',
       payload: format,
     });
   };
@@ -27,11 +27,12 @@ const ToggleFormatButton = ({ dispatch, currentFormat }) => {
 const mapDispatchToProps = (dispatch) => ({
   dispatch,
 });
+
 const mapStateToProps = (state) => ({
   currentFormat: state.currentFormat,
 });
 
 export default connect(
-  mapDispatchToProps,
   mapStateToProps,
+  mapDispatchToProps,
 )(ToggleFormatButton);
