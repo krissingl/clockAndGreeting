@@ -1,0 +1,22 @@
+body {
+  min-height: 100%;
+  background-image: url('../../dist/extras/testImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: aliceblue;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.header {
+  color:aliceblue;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.56);
+}
+.Widget {
+  background: rgba(0, 0, 0, 0.56);
+}
