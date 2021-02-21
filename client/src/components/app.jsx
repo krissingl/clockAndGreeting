@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from '../css/styles.css';
 
 class App extends React.Component {
   constructor() {
@@ -10,7 +11,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>Ollo?</div>
+      <div className={classes.test}>Ollo?</div>
     );
   }
 }
