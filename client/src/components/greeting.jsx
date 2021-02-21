@@ -12,7 +12,7 @@ const Greeting = ({ timeOfDay }) => {
   } else if (timeOfDay === 'night') {
     greeting = 'Good Night';
   } else {
-    greeting = 'Greetings';
+    greeting = 'Loading...';
   }
 
   return (

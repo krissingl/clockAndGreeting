@@ -2,13 +2,22 @@
 
 const getTime = (format) => {
   const date = new Date();
-  const unformattedTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  const hour = date.getHours();
+  const minute = date.getMinutes();
 
   let formattedTime;
   if (format === '24hr') {
-    formattedTime = unformattedTime;
+    formattedTime = `${hour}:${minute}`;
   } else {
-    formattedTime = new Date().toLocaleTimeString();
+    let formattedHour;
+    if (hour > 12) {
+      formattedHour = (hour - 12);
+    } else if (hour === 0) {
+      formattedHour = 12;
+    } else {
+      formattedHour = hour;
+    }
+    formattedTime = `${formattedHour}:${minute}`;
   }
   return formattedTime;
 };
