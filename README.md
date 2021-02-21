@@ -2,7 +2,7 @@
 
 I had a lot of fun putting this application together and I am excited to demo it for you!
 
-### The Goal of the INSPIRE app
+# The Goal of the INSPIRE app
 
 Per your intructions, below is the goal for this application and what the final product should look like.
 
@@ -41,3 +41,11 @@ The positioning of elements on the page is not the absolute most crucial thing f
 * Allow the user to toggle the clock from, 12hr to military time.
 * Include an Icon to show what the weather is sunny/cloudy/rainy
 * Add a button to cycle to next quote/picture
+
+# Breaking it Down
+
+![](zReadMePics/FinalFormBreakdown.png)
+
+After breaking down the example image I have a pretty clear idea of how to proceed and built a flowchart to map out my route.
+
+![](zReadMePics/AppFlowchart.jpg)
