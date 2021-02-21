@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import WEATHER_API_KEY from '../../../../config/weatherAPIkey.js';
 import classes from '../../css/styles.css';
 
 class QuoteWidget extends React.Component {
   constructor() {
     super();
     this.state = {
-      quote: null,
+      quote: 'Loading Quote...',
     };
   }
 
@@ -27,7 +26,7 @@ class QuoteWidget extends React.Component {
   render() {
     return (
       <div className={classes.Widget}>
-        <div>Quote Widget</div>
+        <div>{this.state.quote}</div>
       </div>
     );
   }

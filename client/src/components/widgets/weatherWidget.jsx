@@ -8,7 +8,7 @@ class WeatherWidget extends React.Component {
   constructor() {
     super();
     this.state = {
-      weather: null,
+      weather: 'Loading Weather...',
     };
   }
 
@@ -21,20 +21,11 @@ class WeatherWidget extends React.Component {
         console.log(error);
       });
   }
-  // componentDidMount() {
-  //   axios.get('https://dog.ceo/api/breeds/image/random')
-  //   .then(response => {
-  //     console.log(response.data);
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
-  // }
 
   render() {
     return (
       <div className={classes.Widget}>
-        <div>Weather Widget</div>
+        <div>{this.state.weather}</div>
       </div>
     );
   }

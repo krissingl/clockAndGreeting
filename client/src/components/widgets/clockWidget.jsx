@@ -9,7 +9,7 @@ class ClockWidget extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentTime: 'Loading...',
+      currentTime: 'Loading Clock...',
       timeOfDay: null,
     };
     this.updateClock = this.updateClock.bind(this);
