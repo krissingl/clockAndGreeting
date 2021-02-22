@@ -56,19 +56,19 @@ The Project has been completed to the requirements and you can download it to ru
 
 You can run the app on your local machine by following the instructions below.
 
-##### Step One: Git the Repo
+### Step One: Git the Repo
 
 1. Clone this repository to your local machine and open it in your code editor.
 
-##### Step Two: Download the Packages and add API key
+### Step Two: Download the Packages and add API key
 
-1. Run the following command in the root directory's terminal to download the correct packages for the app
+1. Run the following command in the root directory's terminal to download the needed packages
     ```
     npm install
     ```
 2. The Open Weather API requires an API key to access their endpoints. First, follow the documentation [HERE](https://home.openweathermap.org/users/sign_up) to sign up and get your own free API key
-3. Once you have you API key you must create a config folder in the root directory of the app to hold your API key.
-4. Within your config folder create an weatherAPIkey.js file and add the following code:
+3. Once you have your API key you must create a config folder in the root directory to hold that key.
+4. Within your config folder create a file named 'weatherAPIkey.js' and within it add the following code:
     ```
     const WEATHER_API_KEY = 'YOUR_API_KEY_FROM_OPEN_WEATHER';
     export default WEATHER_API_KEY;
@@ -77,7 +77,7 @@ You can run the app on your local machine by following the instructions below.
 5. Add the config folder to your .gitignore file so your API key remains private
 
 
-##### Step Three: Spin Her Up
+### Step Three: Spin Her Up
 
 1. Once you have completed the inital setup, it is ready to run! Make sure you do not have anything running on you localhost port 8080.
 2. Run the following commands to spin it up:
