@@ -24,6 +24,9 @@ div {
   margin: 5%;
   color: aliceblue;
 }
+.newBackGrounBtn {
+  text-shadow: 2px 2px 4px #000000;
+}
 .topBox {
   display: flex;
   flex-direction: row;
@@ -49,6 +52,8 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  margin-right: 1%;
 }
 .tempBox {
   display: flex;
@@ -79,16 +84,19 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 .clock {
   font-size: xx-large;
 }
 .quoteWidget {
   background: rgba(0, 0, 0, 0.56);
-  width: 35%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  margin-left: 1%;
 }
 .quoteBox {
   display: flex;

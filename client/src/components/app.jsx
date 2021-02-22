@@ -52,7 +52,7 @@ class App extends React.Component {
           <ClockWidget />
         </div>
         <div>
-          <button type="button" onClick={this.backgroundUrlGenerator}>New Background?</button>
+          <button type="button" onClick={this.backgroundUrlGenerator} className={classes.newBackGrounBtn}>New Background?</button>
         </div>
       </div>
     );
