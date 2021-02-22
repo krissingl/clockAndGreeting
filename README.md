@@ -49,3 +49,23 @@ The positioning of elements on the page is not the absolute most crucial thing f
 After breaking down the example image I have a pretty clear idea of how to proceed and built a flowchart to map out my route.
 
 ![](zReadMePics/AppFlowchart.jpg)
+
+The Project has been completed to the requirements and you can download it to run on your local machine.
+
+# Get the App
+
+You can run the app on your local machine by following the instructions below.
+
+### Step One: Git the Repo
+
+### Step Two: Download the Packages
+
+### Step Three: Spin Her Up
+
+![](zReadMePics/MyFinalForm.png)
+
+My Final Product came out pretty well, if I do say so myself. Let me take you through a tour of the features...
+
+![](zReadMePics/MyFinalFormBreakdown.png)
+
+Thats pretty much it, thanks for taking the time to walk through this with me and have a fantastic day!
