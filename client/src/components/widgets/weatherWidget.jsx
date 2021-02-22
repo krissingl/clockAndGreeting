@@ -8,6 +8,7 @@ class WeatherWidget extends React.Component {
   constructor() {
     super();
     this.state = {
+      city: 'Boise',
       temp: 'Loading Temperature..',
       tempMax: '',
       tempMin: '',
@@ -17,7 +18,7 @@ class WeatherWidget extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Boise&?units=metric&APPID=${WEATHER_API_KEY}`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&?units=metric&APPID=${WEATHER_API_KEY}`)
       .then((response) => {
         const { data } = response;
 
@@ -49,7 +50,7 @@ class WeatherWidget extends React.Component {
     return (
       <div className={classes.WeatherWidget}>
         <div className={classes.tempBox}>
-          <div>
+          <div className={classes.mainTemp}>
             {this.state.temp}
           </div>
           <div>
@@ -59,13 +60,13 @@ class WeatherWidget extends React.Component {
             {this.state.tempMax}
           </div>
         </div>
-        <div>
-          <img src={this.state.iconUrl} alt="Weather Icon" />
+        <div className={classes.weatherBox}>
+          <img src={this.state.iconUrl} alt="Weather Icon" className={classes.weatherIcon} />
           <div>
             {this.state.weather}
           </div>
           <div>
-            {'F° C°'}
+            F° C°
           </div>
         </div>
       </div>

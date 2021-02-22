@@ -50,9 +50,9 @@ class ClockWidget extends React.Component {
 
   render() {
     return (
-      <div className={classes.Widget}>
+      <div className={classes.clockWidget}>
         <ToggleFormatButton />
-        <div>{this.state.currentTime}</div>
+        <div className={classes.clock}>{this.state.currentTime}</div>
         <Greeting timeOfDay={this.state.timeOfDay} />
       </div>
     );

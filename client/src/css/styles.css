@@ -1,23 +1,29 @@
-header {
-  margin: 0%;
+html, body, body div, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
 }
-body {
-  color: aliceblue;
-  margin: 0%;
+
+button {
+  border: none;
+  background-color: transparent;
+  color: rgb(211, 217, 223);
+  outline: 0;
+}
+button:hover {
+  color: white;
+}
+button:active {
+  outline: 0;
+  border: 0;
 }
 div {
-  border: none !important;
-  margin: 0%;
-}
-/* .test {
-  min-height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  margin: 5%;
   color: aliceblue;
-  background-color: pink;
-} */
+}
 .topBox {
   display: flex;
   flex-direction: row;
@@ -39,11 +45,68 @@ div {
 }
 .WeatherWidget {
   background: rgba(0, 0, 0, 0.56);
-  max-width: 45%;
+  width: 20%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .tempBox {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border-right: 1px;
+  border-style: solid;
+  border-color: aliceblue;
+  justify-content: center;
+  width: 50%;
+}
+.mainTemp {
+  font-size: x-large;
+}
+.weatherBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.weatherIcon {
+  background-color: lightblue;
+}
+.clockWidget {
+  width: 25%;
+  background: rgba(0, 0, 0, 0.56);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clock {
+  font-size: xx-large;
+}
+.quoteWidget {
+  background: rgba(0, 0, 0, 0.56);
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quoteBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quoteBox:hover > .quoteAuthor {
+  display: block;
+}
+.quoteBtn {
+  align-self: flex-end;
+}
+.quoteMessage {
+  font-size: large;
+  text-align: center;
+}
+.quoteAuthor {
+  font-size: smaller;
+  display: none;
 }

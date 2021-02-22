@@ -37,10 +37,12 @@ class QuoteWidget extends React.Component {
 
   render() {
     return (
-      <div className={classes.Widget}>
-        <div>{this.state.quoteMsg}</div>
-        <div>{`--${this.state.quoteAuthor}`}</div>
-        <div>
+      <div className={classes.quoteWidget}>
+        <div className={classes.quoteBox}>
+          <div className={classes.quoteMessage}>{this.state.quoteMsg}</div>
+          <div className={classes.quoteAuthor}>{`--${this.state.quoteAuthor}`}</div>
+        </div>
+        <div className={classes.quoteBtn}>
           <button type="button" onClick={this.getNewQuote}>New Quote</button>
         </div>
       </div>

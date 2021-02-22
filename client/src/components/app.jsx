@@ -37,13 +37,13 @@ class App extends React.Component {
       backgroundImage: `url(${this.state.backgroundImgUrl})`,
       backgroundSize: 'cover',
       height: '100vh',
-      margin: '0%',
     };
     return (
       <div style={backgroundStyle}>
         <div className={classes.header}>
           <h1>{this.state.message}</h1>
         </div>
+        <br />
         <div className={classes.topBox}>
           <QuoteWidget />
           <WeatherWidget />
