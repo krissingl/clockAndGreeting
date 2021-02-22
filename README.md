@@ -62,7 +62,7 @@ You can run the app on your local machine by following the instructions below.
 
 ##### Step Two: Download the Packages and add API key
 
-1. Run the following command to download the correct packages for the app
+1. Run the following command in the root directory's terminal to download the correct packages for the app
     ```
     npm install
     ```
