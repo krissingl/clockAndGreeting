@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      message: 'Welcome to Inspire',
+      message: 'Inspire',
     };
   }
 
@@ -18,10 +18,15 @@ class App extends React.Component {
         <div className={classes.header}>
           <h1>{this.state.message}</h1>
         </div>
-        <div className={classes.main}>
+        <div className={classes.topBox}>
           <QuoteWidget />
-          <ClockWidget />
           <WeatherWidget />
+        </div>
+        <div className={classes.bottomBox}>
+          <ClockWidget />
+        </div>
+        <div>
+          <button type="button">New Background?</button>
         </div>
       </div>
     );
