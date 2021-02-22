@@ -3,6 +3,7 @@ import classes from '../css/styles.css';
 import ClockWidget from './widgets/clockWidget.jsx';
 import QuoteWidget from './widgets/quoteWidget.jsx';
 import WeatherWidget from './widgets/weatherWidget.jsx';
+import backgroundUrlGenerator from './backgroundGen.jsx';
 
 class App extends React.Component {
   constructor() {
