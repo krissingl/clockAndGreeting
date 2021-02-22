@@ -8,7 +8,8 @@ class WeatherWidget extends React.Component {
   constructor() {
     super();
     this.state = {
-      city: 'Boise',
+      // Change City here to get localized weather
+      city: 'Phoenix',
       temp: 'Loading Temperature..',
       tempMax: '',
       tempMin: '',
@@ -28,13 +29,14 @@ class WeatherWidget extends React.Component {
           data.main.temp_min,
           data.main.temp_max];
         const fahren = `${Math.floor(1.8 * (kelvinTemps[0] - 273) + 32)}°F`;
-        const fahrenMin = `min ${Math.floor(1.8 * (kelvinTemps[1] - 273) + 32)}°F`;
-        const fahrenMax = `max ${Math.floor(1.8 * (kelvinTemps[2] - 273) + 32)}°F`;
+        const fahrenMin = `low: ${Math.floor(1.8 * (kelvinTemps[1] - 273) + 32)}°F`;
+        const fahrenMax = `high: ${Math.floor(1.8 * (kelvinTemps[2] - 273) + 32)}°F`;
         // Set state to Fahrenheit temperatures
         this.setState({ temp: fahren });
         this.setState({ tempMin: fahrenMin });
         this.setState({ tempMax: fahrenMax });
 
+        // Set weather description and weather icon
         const weatherDescrip = data.weather[0].description;
         const weatherIcon = data.weather[0].icon;
         const weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
@@ -66,7 +68,7 @@ class WeatherWidget extends React.Component {
             {this.state.weather}
           </div>
           <div>
-            F° C°
+            °F °C
           </div>
         </div>
       </div>

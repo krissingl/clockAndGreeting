@@ -17,6 +17,7 @@ class ClockWidget extends React.Component {
   }
 
   componentDidMount() {
+    // Updates the component every second for correct time
     this.interval = setInterval(() => {
       this.updateClock();
       this.updateTimeOfDay();
@@ -32,6 +33,7 @@ class ClockWidget extends React.Component {
     this.setState({ currentTime: newTime });
   }
 
+  // Updated the time of day state for greeting
   updateTimeOfDay() {
     let newTimeOfDay;
     const day = new Date();

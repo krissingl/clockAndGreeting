@@ -20,12 +20,14 @@ class QuoteWidget extends React.Component {
   getNewQuote() {
     axios.get('https://type.fit/api/quotes')
       .then((response) => {
+        // Get random index to select random quote from list
         const endOfList = response.data.length - 1;
         const randomNum = Math.floor((Math.random() * endOfList) + 1);
+        // Set quote message and author
         const msg = response.data[randomNum].text;
         let auth = response.data[randomNum].author;
         if (auth === null) {
-          auth = 'anoymous';
+          auth = 'anonymous';
         }
         this.setState({ quoteMsg: msg });
         this.setState({ quoteAuthor: auth });
@@ -38,6 +40,7 @@ class QuoteWidget extends React.Component {
   render() {
     return (
       <div className={classes.quoteWidget}>
+        <br />
         <div className={classes.quoteBox}>
           <div className={classes.quoteMessage}>{this.state.quoteMsg}</div>
           <div className={classes.quoteAuthor}>{`--${this.state.quoteAuthor}`}</div>
