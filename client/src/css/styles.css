@@ -1,12 +1,23 @@
+header {
+  margin: 0%;
+}
 body {
+  color: aliceblue;
+  margin: 0%;
+}
+div {
+  border: none !important;
+  margin: 0%;
+}
+/* .test {
   min-height: 100%;
-  background-image: url('../../dist/extras/testImage.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   color: aliceblue;
-}
+  background-color: pink;
+} */
 .topBox {
   display: flex;
   flex-direction: row;
