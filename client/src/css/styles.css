@@ -7,10 +7,15 @@ body {
   background-attachment: fixed;
   color: aliceblue;
 }
-.main {
+.topBox {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.bottomBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .header {
   color:aliceblue;
@@ -19,4 +24,15 @@ body {
 }
 .Widget {
   background: rgba(0, 0, 0, 0.56);
+  max-width: 45%;
+}
+.WeatherWidget {
+  background: rgba(0, 0, 0, 0.56);
+  max-width: 45%;
+  display: flex;
+  flex-direction: row;
+}
+.tempBox {
+  display: flex;
+  flex-direction: column;
 }

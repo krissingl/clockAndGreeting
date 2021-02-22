@@ -7,7 +7,8 @@ class QuoteWidget extends React.Component {
   constructor() {
     super();
     this.state = {
-      quote: 'Loading Quote...',
+      quoteMsg: 'Loading Quote...',
+      quoteAuthor: '',
     };
   }
 
@@ -16,7 +17,13 @@ class QuoteWidget extends React.Component {
       .then((response) => {
         const endOfList = response.data.length - 1;
         const randomNum = Math.floor((Math.random() * endOfList) + 1);
-        console.log(response.data[randomNum]);
+        const msg = response.data[randomNum].text;
+        let auth = response.data[randomNum].author;
+        if (auth === null) {
+          auth = 'anoymous';
+        }
+        this.setState({ quoteMsg: msg });
+        this.setState({ quoteAuthor: auth });
       })
       .catch((error) => {
         console.log(error);
@@ -26,7 +33,11 @@ class QuoteWidget extends React.Component {
   render() {
     return (
       <div className={classes.Widget}>
-        <div>{this.state.quote}</div>
+        <div>{this.state.quoteMsg}</div>
+        <div>{`--${this.state.quoteAuthor}`}</div>
+        <div>
+          <button type="button">New Quote</button>
+        </div>
       </div>
     );
   }

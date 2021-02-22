@@ -8,14 +8,37 @@ class WeatherWidget extends React.Component {
   constructor() {
     super();
     this.state = {
+      temp: 'Loading Temperature..',
+      tempMax: '',
+      tempMin: '',
       weather: 'Loading Weather...',
+      iconUrl: '',
     };
   }
 
   componentDidMount() {
-    axios.get(`api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=${WEATHER_API_KEY}`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Boise&?units=metric&APPID=${WEATHER_API_KEY}`)
       .then((response) => {
-        console.log(response.data);
+        const { data } = response;
+
+        // Kelvin to Fahrenheit 1.8(K - 273) + 32
+        const kelvinTemps = [
+          data.main.temp,
+          data.main.temp_min,
+          data.main.temp_max];
+        const fahren = `${Math.floor(1.8 * (kelvinTemps[0] - 273) + 32)}°F`;
+        const fahrenMin = `min ${Math.floor(1.8 * (kelvinTemps[1] - 273) + 32)}°F`;
+        const fahrenMax = `max ${Math.floor(1.8 * (kelvinTemps[2] - 273) + 32)}°F`;
+        // Set state to Fahrenheit temperatures
+        this.setState({ temp: fahren });
+        this.setState({ tempMin: fahrenMin });
+        this.setState({ tempMax: fahrenMax });
+
+        const weatherDescrip = data.weather[0].description;
+        const weatherIcon = data.weather[0].icon;
+        const weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        this.setState({ weather: weatherDescrip });
+        this.setState({ iconUrl: weatherIconUrl });
       })
       .catch((error) => {
         console.log(error);
@@ -24,8 +47,27 @@ class WeatherWidget extends React.Component {
 
   render() {
     return (
-      <div className={classes.Widget}>
-        <div>{this.state.weather}</div>
+      <div className={classes.WeatherWidget}>
+        <div className={classes.tempBox}>
+          <div>
+            {this.state.temp}
+          </div>
+          <div>
+            {this.state.tempMin}
+          </div>
+          <div>
+            {this.state.tempMax}
+          </div>
+        </div>
+        <div>
+          <img src={this.state.iconUrl} alt="Weather Icon" />
+          <div>
+            {this.state.weather}
+          </div>
+          <div>
+            {'F° C°'}
+          </div>
+        </div>
       </div>
     );
   }
