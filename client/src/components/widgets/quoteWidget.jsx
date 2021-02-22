@@ -10,9 +10,14 @@ class QuoteWidget extends React.Component {
       quoteMsg: 'Loading Quote...',
       quoteAuthor: '',
     };
+    this.getNewQuote = this.getNewQuote.bind(this);
   }
 
   componentDidMount() {
+    this.getNewQuote();
+  }
+
+  getNewQuote() {
     axios.get('https://type.fit/api/quotes')
       .then((response) => {
         const endOfList = response.data.length - 1;
@@ -36,7 +41,7 @@ class QuoteWidget extends React.Component {
         <div>{this.state.quoteMsg}</div>
         <div>{`--${this.state.quoteAuthor}`}</div>
         <div>
-          <button type="button">New Quote</button>
+          <button type="button" onClick={this.getNewQuote}>New Quote</button>
         </div>
       </div>
     );
