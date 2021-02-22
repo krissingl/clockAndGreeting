@@ -16,9 +16,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // Generates a background image upon page load
     this.backgroundUrlGenerator();
   }
 
+  // Background image url generator used on page load and onClick
   backgroundUrlGenerator() {
     let url;
     axios.get('http://www.splashbase.co/api/v1/images/random')
@@ -32,7 +34,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.backgroundImgUrl);
+    // Background Image style
     const backgroundStyle = {
       backgroundImage: `url(${this.state.backgroundImgUrl})`,
       backgroundSize: 'cover',

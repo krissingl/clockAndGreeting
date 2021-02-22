@@ -1,3 +1,5 @@
+/* Throughout the codebase styles */
+
 html, body, body div, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -6,7 +8,6 @@ html, body, body div, h1, h2, h3, h4, h5, h6 {
   vertical-align: baseline;
   background: transparent;
 }
-
 button {
   border: none;
   background-color: transparent;
@@ -24,6 +25,9 @@ div {
   margin: 5%;
   color: aliceblue;
 }
+
+/* Main App Component styles */
+
 .newBackGrounBtn {
   text-shadow: 2px 2px 4px #000000;
 }
@@ -42,10 +46,9 @@ div {
   text-align: center;
   background: rgba(0, 0, 0, 0.56);
 }
-.Widget {
-  background: rgba(0, 0, 0, 0.56);
-  max-width: 45%;
-}
+
+/* Weather Widget Component styles */
+
 .WeatherWidget {
   background: rgba(0, 0, 0, 0.56);
   width: 20%;
@@ -78,6 +81,9 @@ div {
 .weatherIcon {
   background-color: lightblue;
 }
+
+/* Clock Widget Component styles */
+
 .clockWidget {
   width: 25%;
   background: rgba(0, 0, 0, 0.56);
@@ -89,6 +95,9 @@ div {
 .clock {
   font-size: xx-large;
 }
+
+/* Quote Widget Component styles */
+
 .quoteWidget {
   background: rgba(0, 0, 0, 0.56);
   width: 25%;
