@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from '../css/styles.css';
 
 const Greeting = ({ timeOfDay }) => {
   let greeting;
