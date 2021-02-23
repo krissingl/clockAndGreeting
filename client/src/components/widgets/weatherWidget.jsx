@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import WEATHER_API_KEY from '../../../../config/weatherAPIkey.js';
 import classes from '../../css/styles.css';
+import ChangeTempTypeBtn from '../changeTempFormat.jsx';
 
 class WeatherWidget extends React.Component {
   constructor() {
@@ -16,9 +17,14 @@ class WeatherWidget extends React.Component {
       weather: 'Loading Weather...',
       iconUrl: '',
     };
+    this.getWeather = this.getWeather.bind();
   }
 
   componentDidMount() {
+    this.getWeather();
+  }
+
+  getWeather() {
     axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&?units=metric&APPID=${WEATHER_API_KEY}`)
       .then((response) => {
         const { data } = response;
