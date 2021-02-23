@@ -81,6 +81,10 @@ div {
 .weatherIcon {
   background-color: lightblue;
 }
+.tempFormatBox {
+  display: flex;
+  flex-direction: row;
+}
 
 /* Clock Widget Component styles */
 
