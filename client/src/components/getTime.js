@@ -30,7 +30,7 @@ const getTime = (format) => {
     let formattedHour;
     if (hour > 12) {
       formattedHour = (parseFloat(hour) - 12);
-    } else if (hour === 0) {
+    } else if (hour === '00') {
       formattedHour = 12;
     } else {
       formattedHour = hour;
